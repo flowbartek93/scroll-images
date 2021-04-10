@@ -36,10 +36,28 @@ body {
 }
 
 .image-container {
-  margin: 10px 30%;
+  text-align: center;
 }
 .image-container > a > img {
-  width: 100%;
+  width: 40%;
+  object-fit: cover;
+  height: 50%;
+
+  margin: 1rem;
+  transition: all 0.2s ease-out;
+}
+
+img {
+  border: 10px solid white;
+  -webkit-box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.64);
+  box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.64);
+}
+a:nth-child(odd):hover > img {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+a:nth-child(even):hover > img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 @media screen and (max-width: 600px) {
